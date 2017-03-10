@@ -41,7 +41,7 @@
                 meta.httpEquiv = "refresh";
                 var decodedPath = decodeURIComponent(window.location.search.slice(6));
                 url = protocolToReplace + "//netfox.github.io" + decodedPath;
-                meta.content = meta.content = "1; url={0}".f(url);
+                meta.content = meta.content = "0; url={0}".f(url);
                 document.getElementsByTagName('head')[0].appendChild(meta);
             }
             if (window.location.protocol == "https:") {
