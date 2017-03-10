@@ -45,27 +45,18 @@
                 iframe.frameBorder = "0";
                 document.body.appendChild(iframe);
             }
-            function tryOpenApp2() {
-                var meta = document.createElement('meta');
-                meta.httpEquiv = "refresh";
-                var decodedPath = decodeURIComponent(window.location.search.slice(6));
-                url = protocolToReplace + "//netfox.github.io" + decodedPath;
-                meta.content = "1; url={0}".f(url);
-                document.getElementsByTagName('head')[0].appendChild(meta);
-            }
             if (window.location.protocol == "https:") {
                 protocolToReplace = "https:";
             }
 protocolToReplace = "https:";
-            if (("standalone" in window.navigator && (iOSVersion() < 8.9)) || window.navigator.appVersion.indexOf("Win")!=-1) {
+            //if (("standalone" in window.navigator && (iOSVersion() < 8.9)) || window.navigator.appVersion.indexOf("Win")!=-1) {
                 tryOpenApp();
-            } else {
-		tryOpenApp2()
-                /**openApp();
+            /**} else {
+                openApp();
                 var decodedPath = decodeURIComponent(window.location.search.slice(6));
                 var f = document.getElementById('idFrame');
-                f.src = protocolToReplace + "//netfox.github.io" + decodedPath;**/
-            }
+                f.src = protocolToReplace + "//netfox.github.io" + decodedPath;
+            }**/
         </script>
     </body>
 </html>
