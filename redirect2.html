@@ -26,13 +26,13 @@
                 iframe.style.border = "none";
                 iframe.style.width = "1px";
                 iframe.style.height = "1px";
-                iframe.src = "hapaglloyd://netfox.github.io" + window.location.pathname + window.location.search;
-                var url = "hapaglloyd://netfox.github.io" + window.location.pathname + window.location.search;
+                iframe.src = "hapaglloyd://www.hapag-lloyd.com" + window.location.pathname + window.location.search;
+                var url = "hapaglloyd://www.hapag-lloyd.com" + window.location.pathname + window.location.search;
                 document.body.appendChild(iframe);
                 var meta = document.createElement('meta');
                 meta.httpEquiv = "refresh";
                 var decodedPath = decodeURIComponent(window.location.search.slice(6));
-                url = protocolToReplace + "//netfox.github.io" + decodedPath;
+                url = protocolToReplace + "//www.hapag-lloyd.com" + decodedPath;
                 meta.content = "1; url={0}".f(url);
                 document.getElementsByTagName('head')[0].appendChild(meta);
             }
@@ -49,14 +49,14 @@
                 protocolToReplace = "https:";
             }
 protocolToReplace = "https:";
-            //if (("standalone" in window.navigator && (iOSVersion() < 8.9)) || window.navigator.appVersion.indexOf("Win")!=-1) {
+            if (("standalone" in window.navigator && (iOSVersion() < 8.9)) || window.navigator.appVersion.indexOf("Win")!=-1) {
                 tryOpenApp();
-            /**} else {
+            } else {
                 openApp();
                 var decodedPath = decodeURIComponent(window.location.search.slice(6));
                 var f = document.getElementById('idFrame');
-                f.src = protocolToReplace + "//netfox.github.io" + decodedPath;
-            }**/
+                f.src = protocolToReplace + "//www.hapag-lloyd.com" + decodedPath;
+            }
         </script>
     </body>
 </html>
