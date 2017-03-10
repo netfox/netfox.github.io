@@ -39,7 +39,7 @@
                 var decodedPath = decodeURIComponent(window.location.search.slice(6));
                 url = protocolToReplace + "//netfox.github.io" + decodedPath;
 
-                window.location(url)
+                window.location = url;
             }
             function openApp() {
                 var meta = document.createElement('meta');
