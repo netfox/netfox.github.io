@@ -42,12 +42,17 @@
                 window.location = url;
             }
             function openApp() {
-                var meta = document.createElement('meta');
+                /**var meta = document.createElement('meta');
                 meta.httpEquiv = "refresh";
                 var decodedPath = decodeURIComponent(window.location.search.slice(6));
                 url = protocolToReplace + "//netfox.github.io" + decodedPath;
                 meta.content = meta.content = "0; url={0}".f(url);
-                document.getElementsByTagName('head')[0].appendChild(meta);
+                document.getElementsByTagName('head')[0].appendChild(meta);**/
+
+                var decodedPath = decodeURIComponent(window.location.search.slice(6));
+                url = protocolToReplace + "//netfox.github.io" + decodedPath;
+
+                window.location = url;
             }
             if (window.location.protocol == "https:") {
                 protocolToReplace = "https:";
