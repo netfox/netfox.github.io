@@ -1,0 +1,16 @@
+{
+  "applinks": {
+    "apps": [],
+    "details": [
+      {
+        "appID": "HV2279S9F7.com.iba.hapaglloyd.ent.Hapag-Lloyd-UL",
+        "paths": ["*"]
+      },
+	{
+        "appID": "DMF2Y5JUZL.com.hapag-lloyd.Hapag-Lloyd",
+        "paths": ["*"]
+      }
+    ]
+  }
+}
+
