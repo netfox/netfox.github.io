@@ -49,7 +49,11 @@
                 protocolToReplace = "https:";
             }
             if (("standalone" in window.navigator && (iOSVersion() < 8.9)) || window.navigator.appVersion.indexOf("Win")!=-1) ) {
-                tryOpenApp();
+                //tryOpenApp();
+                openApp();
+                var decodedPath = decodeURIComponent(window.location.search.slice(6));
+                var f = document.getElementById('idFrame');
+                f.src = protocolToReplace + "//www.hapag-lloyd.com" + decodedPath;
             } else {
                 openApp();
                 var decodedPath = decodeURIComponent(window.location.search.slice(6));
