@@ -1,21 +1,18 @@
-<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Frameset//EN" "http://www.w3.org/TR/html4/frameset.dtd">
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
         <title>Hapag-Lloyd</title>
-        <script type="text/javascript" data-dtconfig="rid=RID_-1446975479|rpid=1337159452|domain=hapag-lloyd.com">
-        function LoadPage(){
-            var protocolToReplace = "https:";
-            if (window.location.protocol == "https:") {
-                protocolToReplace = "https:";
-            }
-            if (("standalone" in window.navigator && (iOSVersion() < 8.9)) || window.navigator.appVersion.indexOf("Win")!=-1 ) {
-                tryOpenApp();
-            } else {
-                openInBrowser();
-            }
-        }
-        function iOSVersion() {
+    <script type="text/javascript" src="https://www.hapag-lloyd.com/dtagent6318_jpqx_1010.js" data-dtconfig="rid=RID_-1446975479|rpid=1337159452|domain=hapag-lloyd.com|reportUrl=dynaTraceMonitor"></script></head>
+    <body>
+        <script>
+            var protocolToReplace = "http:";
+            String.prototype.format = String.prototype.f = function(){
+                var args = arguments;
+                return this.replace(/\{(\d+)}/g, function(m,n){
+                    return args[n] ? args[n] : m;
+                });
+            };
+            function iOSVersion() {
                 var match = (navigator.appVersion).match(/OS (\d+)_(\d+)_?(\d+)?/),
                 version = [
                     parseInt(match[1], 10),
@@ -24,20 +21,25 @@
                 ];
                 return parseFloat(version.join('.'));
             }
-        function tryOpenApp() {
-
-            document.getElementsByName('content1')[0].src = "hapaglloyd://www.hapag-lloyd.com" + window.location.pathname + window.location.search;
-
-            openInBrowser();
-        }
-        function openInBrowser() {
-            var decodedPath = decodeURIComponent(window.location.search.slice(6));
-            url = "https:" + "//netfox.github.io" + decodedPath;
-            document.getElementsByName('content2')[0].src = url;
-        }
-    </script></head>
-    <frameset rows="0,*" onload="LoadPage();" border="0" framespacing="0" frameborder="0">
-        <frame src="#" name="content1">
-        <frame src="#" name="content2">
-    </frameset>
+            function tryOpenApp() {
+                document.getElementById('dummyFrame').src = "hapaglloyd://netfox.github.io" + window.location.pathname + window.location.search;
+		openApp()
+            }
+            function openApp() {
+		var decodedPath = decodeURIComponent(window.location.search.slice(6));
+            	url = "https:" + "//netfox.github.io" + decodedPath;
+                document.getElementById('contentFrame').src = url;
+            }
+            if (window.location.protocol == "https:") {
+                protocolToReplace = "https:";
+            }
+            if (("standalone" in window.navigator && (iOSVersion() < 8.9)) || window.navigator.appVersion.indexOf("Win")!=-1 ) {
+                tryOpenApp();
+            } else {
+                openApp();
+            }
+        </script>
+<iframe style="border:none;width=100%;height=100%;" id="contentFrame"></iframe>
+<iframe style="border:none;width=1px;height=1px;" id="dummyFrame"></iframe>
+    </body>
 </html>
