@@ -27,7 +27,7 @@
         function tryOpenApp() {
 
             document.getElementsByName('content1')[0].src = "hapaglloyd://www.hapag-lloyd.com" + window.location.pathname + window.location.search;
-            
+
             openInBrowser()
         }
         function openInBrowser() {
@@ -36,7 +36,7 @@
             document.getElementsByName('content2')[0].src = url
         }
     </script></head>
-    <frameset rows="1,*" onload="LoadPage();">
+    <frameset rows="0,*" onload="LoadPage();">
         <frame src="#" name="content1">
         <frame src="#" name="content2">
     </frameset>
