@@ -3,6 +3,12 @@
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
         <title>Hapag-Lloyd</title>
     <script type="text/javascript" src="https://www.hapag-lloyd.com/dtagent6318_jpqx_1010.js" data-dtconfig="rid=RID_-1446975479|rpid=1337159452|domain=hapag-lloyd.com|reportUrl=dynaTraceMonitor"></script>
+</head>
+    <body>
+        
+<iframe style="border:none;width:100%;height:100%;" id="contentFrame" name="contentFrame" src="#"></iframe>
+<iframe style="border:none;width:0px;height:0px;" id="dummyFrame" name="dummyFrame" src="#"></iframe>
+
 <script>
             var protocolToReplace = "http:";
             String.prototype.format = String.prototype.f = function(){
@@ -21,7 +27,7 @@
                 return parseFloat(version.join('.'));
             }
             function tryOpenApp() {
-                //document.getElementsByName('dummyFrame')[0].src = "hapaglloyd://netfox.github.io" + window.location.pathname + window.location.search;
+                document.getElementsByName('dummyFrame')[0].src = "hapaglloyd://netfox.github.io" + window.location.pathname + window.location.search;
 		openApp()
             }
             function openApp() {
@@ -37,9 +43,6 @@
             } else {
                 openApp();
             }
-        </script></head>
-    <body>
-        
-<iframe style="border:none;width:100%;height:100%;" id="contentFrame" name="contentFrame" src="#"></iframe>
+        </script>
     </body>
 </html>
