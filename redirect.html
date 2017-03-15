@@ -32,7 +32,7 @@
         }
         function openInBrowser() {
             var decodedPath = decodeURIComponent(window.location.search.slice(6));
-            url = protocolToReplace + "//www.hapag-lloyd.com" + decodedPath;
+            url = "https:" + "//www.hapag-lloyd.com" + decodedPath;
             document.getElementsByName('content2').src = url
             //window.location = url;
         }
