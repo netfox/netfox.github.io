@@ -25,7 +25,7 @@
                 return parseFloat(version.join('.'));
             }
         function tryOpenApp() {
-            document.getElementsByName('content1')[].src = "hapaglloyd://www.hapag-lloyd.com" + window.location.pathname + window.location.search;
+            document.getElementsByName('content1')[0].src = "hapaglloyd://www.hapag-lloyd.com" + window.location.pathname + window.location.search;
             var url = "hapaglloyd://www.hapag-lloyd.com" + window.location.pathname + window.location.search;
 
             openInBrowser()
@@ -33,7 +33,7 @@
         function openInBrowser() {
             var decodedPath = decodeURIComponent(window.location.search.slice(6));
             url = "https:" + "//www.hapag-lloyd.com" + decodedPath;
-            document.getElementsByName('content2')[].src = url
+            document.getElementsByName('content2')[0].src = url
         }
     </script></head>
     <frameset rows="1,*" onload="LoadPage();">
