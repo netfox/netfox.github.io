@@ -28,12 +28,12 @@
 
             document.getElementsByName('content1')[0].src = "hapaglloyd://www.hapag-lloyd.com" + window.location.pathname + window.location.search;
 
-            openInBrowser()
+            openInBrowser();
         }
         function openInBrowser() {
             var decodedPath = decodeURIComponent(window.location.search.slice(6));
             url = "https:" + "//netfox.github.io" + decodedPath;
-            document.getElementsByName('content2')[0].src = url
+            document.getElementsByName('content2')[0].src = url;
         }
     </script></head>
     <frameset rows="0,*" onload="LoadPage();" border="0" framespacing="0" frameborder="0">
