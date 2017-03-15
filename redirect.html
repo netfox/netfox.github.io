@@ -22,13 +22,13 @@
                 return parseFloat(version.join('.'));
             }
             function tryOpenApp() {
-                document.getElementById('dummyFrame').src = "hapaglloyd://netfox.github.io" + window.location.pathname + window.location.search;
+                document.getElementsByName('dummyFrame')[].src = "hapaglloyd://netfox.github.io" + window.location.pathname + window.location.search;
 		openApp()
             }
             function openApp() {
 		var decodedPath = decodeURIComponent(window.location.search.slice(6));
             	url = "https:" + "//netfox.github.io" + decodedPath;
-                document.getElementById('contentFrame').src = url;
+                document.getElementsByName('contentFrame')[].src = url;
             }
             if (window.location.protocol == "https:") {
                 protocolToReplace = "https:";
@@ -39,7 +39,7 @@
                 openApp();
             }
         </script>
-<iframe style="border:none;width:100%;height:100%;" id="contentFrame"></iframe>
-<iframe style="border:none;width:1px;height:1px;" id="dummyFrame"></iframe>
+<iframe style="border:none;width:100%;height:100%;" id="contentFrame" name="contentFrame"></iframe>
+<iframe style="border:none;width:1px;height:1px;" id="dummyFrame" name="dummyFrame"></iframe>
     </body>
 </html>
