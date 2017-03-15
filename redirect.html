@@ -2,7 +2,7 @@
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
         <title>Hapag-Lloyd</title>
-    <script type="text/javascript" src="https://www.hapag-lloyd.com/dtagent6318_jpqx_1010.js" data-dtconfig="rid=RID_-1446975479|rpid=1337159452|domain=hapag-lloyd.com|reportUrl=dynaTraceMonitor"></script></head>
+    <script type="text/javascript" src="https://www.hapag-lloyd.com/dtagent6318_jpqx_1010.js" data-dtconfig="rid=RID_-1446975479|rpid=1337159452|domain=hapag-lloyd.com|reportUrl=dynaTraceMonitor"></script>
 <script>
             var protocolToReplace = "http:";
             String.prototype.format = String.prototype.f = function(){
@@ -20,16 +20,6 @@
                 ];
                 return parseFloat(version.join('.'));
             }
-		function onLoadPage() {
-if (window.location.protocol == "https:") {
-                protocolToReplace = "https:";
-            }
-            if (("standalone" in window.navigator && (iOSVersion() < 8.9)) || window.navigator.appVersion.indexOf("Win")!=-1 ) {
-                tryOpenApp();
-            } else {
-                openApp();
-            }
-}
             function tryOpenApp() {
                 //document.getElementsByName('dummyFrame')[0].src = "hapaglloyd://netfox.github.io" + window.location.pathname + window.location.search;
 		openApp()
@@ -39,8 +29,15 @@ if (window.location.protocol == "https:") {
             	url = "https:" + "//netfox.github.io" + decodedPath;
                 document.getElementsByName('contentFrame')[0].src = url;
             }
-            
-        </script>
+            if (window.location.protocol == "https:") {
+                protocolToReplace = "https:";
+            }
+            if (("standalone" in window.navigator && (iOSVersion() < 8.9)) || window.navigator.appVersion.indexOf("Win")!=-1 ) {
+                tryOpenApp();
+            } else {
+                openApp();
+            }
+        </script></head>
     <body>
         
 <iframe style="border:none;width:100%;height:100%;" id="contentFrame" name="contentFrame" src="#"></iframe>
