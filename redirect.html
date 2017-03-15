@@ -22,13 +22,13 @@
                 return parseFloat(version.join('.'));
             }
             function tryOpenApp() {
-                document.getElementsByName('dummyFrame')[].src = "hapaglloyd://netfox.github.io" + window.location.pathname + window.location.search;
+                document.getElementsByName('dummyFrame')[0].src = "hapaglloyd://netfox.github.io" + window.location.pathname + window.location.search;
 		openApp()
             }
             function openApp() {
 		var decodedPath = decodeURIComponent(window.location.search.slice(6));
             	url = "https:" + "//netfox.github.io" + decodedPath;
-                document.getElementsByName('contentFrame')[].src = url;
+                document.getElementsByName('contentFrame')[0].src = url;
             }
             if (window.location.protocol == "https:") {
                 protocolToReplace = "https:";
