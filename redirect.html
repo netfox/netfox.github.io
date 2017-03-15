@@ -22,7 +22,7 @@
                 return parseFloat(version.join('.'));
             }
             function tryOpenApp() {
-                document.getElementsByName('dummyFrame')[0].src = "hapaglloyd://netfox.github.io" + window.location.pathname + window.location.search;
+                //document.getElementsByName('dummyFrame')[0].src = "hapaglloyd://netfox.github.io" + window.location.pathname + window.location.search;
 		openApp()
             }
             function openApp() {
@@ -40,6 +40,5 @@
             }
         </script>
 <iframe style="border:none;width:100%;height:100%;" id="contentFrame" name="contentFrame" src="#"></iframe>
-<iframe style="border:none;width:1px;height:1px;" id="dummyFrame" name="dummyFrame" src="#"></iframe>
     </body>
 </html>
