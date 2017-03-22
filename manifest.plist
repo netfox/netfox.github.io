@@ -11,19 +11,19 @@
 					<key>kind</key>
 					<string>software-package</string>
 					<key>url</key>
-					<string>https://netfox.hithub.io/FIT.ipa</string>
+					<string>https://netfox.github.io/FIT.ipa</string>
 				</dict>
 				<dict>
 					<key>kind</key>
 					<string>display-image</string>
 					<key>url</key>
-					<string>https://netfox.hithub.io/hapag_icon%2857%29.png</string>
+					<string>https://netfox.github.io/hapag_icon%2857%29.png</string>
 				</dict>
 				<dict>
 					<key>kind</key>
 					<string>full-size-image</string>
 					<key>url</key>
-					<string>https://netfox.hithub.io/hapag_icon%28512%29.png</string>
+					<string>https://netfox.github.io/hapag_icon%28512%29.png</string>
 				</dict>
 			</array>
 			<key>metadata</key>
