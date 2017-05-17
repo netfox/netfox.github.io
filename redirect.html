@@ -45,7 +45,7 @@
                 meta.content = meta.content = "0; url={0}".f(url);
                 document.getElementsByTagName('head')[0].appendChild(meta);**/
                 var decodedPath = decodeURIComponent(window.location.search.slice(6));
-                url = protocolToReplace + "//netfox.github.io" + decodedPath;
+                url = protocolToReplace + "//" + window.path + decodedPath;
                 window.location = url;
             }
             if (window.location.protocol == "https:") {
