@@ -4,11 +4,11 @@
     "details": [
       {
         "appID": "HV2279S9F7.com.iba.hapaglloyd.ent.Hapag-Lloyd-UL",
-        "paths": ["/en/online-business/tracing/tracing-by-container.html", "/redirect.html", "*/news/*"]
+        "paths": ["/redirect.html", "*/news/*", "*/online-business/tracing/tracing-by-container.html", "*/online-business/tracing/tracing-by-booking.html", "*/online-business/schedules/interactive-schedule.html"]
       },
 	{
         "appID": "DMF2Y5JUZL.com.hapag-lloyd.Hapag-Lloyd",
-        "paths": ["*"]
+        "paths": ["/redirect.html", "*/news/*", "*/online-business/tracing/tracing-by-container.html", "*/online-business/tracing/tracing-by-booking.html", "*/online-business/schedules/interactive-schedule.html"]
       }
     ]
   }
