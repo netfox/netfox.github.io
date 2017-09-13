@@ -1,32 +1,5 @@
-# Compiled source #
-###################
-*.com
-*.class
-*.dll
-*.exe
-*.o
-*.so
-
-# Logs and databases #
-######################
-*.log
-database.php
-cleanup.php
-
-# OS generated files #
-######################
-.DS_Store
-.DS_Store?
-._*
-.Spotlight-V100
-.Trashes
-Icon?
-ehthumbs.db
-Thumbs.db
-
-generated
-
-# IDE
-########
-*.iml
-.idea
+*.DS_Store
+src/js/local.properties
+example/local.properties
+example/bin/
+example/gen/
