@@ -1,0 +1,16 @@
+{
+  "applinks": {
+    "apps": [],
+    "details": [
+      {
+        "appID": "HV2279S9F7.com.iba.hapaglloyd.ent.Hapag-Lloyd-UL",
+        "paths": ["/redirect.html", "/en/online-business/tracing/tracing-by-container.html", "*/news/*"]
+      },
+	{
+        "appID": "DMF2Y5JUZL.com.hapag-lloyd.Hapag-Lloyd",
+        "paths": ["*"]
+      }
+    ]
+  }
+}
+
