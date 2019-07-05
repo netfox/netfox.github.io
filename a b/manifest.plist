@@ -11,31 +11,31 @@
 					<key>kind</key>
 					<string>software-package</string>
 					<key>url</key>
-					<string>https://netfox.github.io/a%20b/FIT.ipa</string>
+					<string>https://teamsites.hlag.com/sites/mars/Shared%20Documents/10%20-%20MARS%20Mobile%20Redesign/2019_03_27_HL_MARS_iOS_v1.2.ipa</string>
 				</dict>
 				<dict>
 					<key>kind</key>
 					<string>display-image</string>
 					<key>url</key>
-					<string>https://netfox.github.io/a%20b/hapag_icon%2857%29.png</string>
+					<string>https://teamsites.hlag.com/sites/mars/Shared%20Documents/10%20-%20MARS%20Mobile%20Redesign/UAT/HL-MARS-Enterprise-57x57.png</string>
 				</dict>
 				<dict>
 					<key>kind</key>
 					<string>full-size-image</string>
 					<key>url</key>
-					<string>https://netfox.github.io/a%20b/hapag_icon%28512%29.png</string>
+					<string>https://teamsites.hlag.com/sites/mars/Shared%20Documents/10%20-%20MARS%20Mobile%20Redesign/UAT/HL-MARS-Enterprise-512x512.png</string>
 				</dict>
 			</array>
 			<key>metadata</key>
 			<dict>
 				<key>bundle-identifier</key>
-				<string>com.iba.hapaglloyd.ent.Hapag-Lloyd-UL</string>
+				<string>com.hapag-lloyd.Hapag-Lloyd-MARS</string>
 				<key>bundle-version</key>
-				<string>1.3.3</string>
+				<string>1.5.3</string>
 				<key>kind</key>
 				<string>software</string>
 				<key>title</key>
-				<string>Hapag-Lloyd</string>
+				<string>HL MARS</string>
 			</dict>
 		</dict>
 	</array>

@@ -1,0 +1,48 @@
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    </head>
+    <body>
+        <script>
+            var protocolToReplace = "http:";
+            String.prototype.format = String.prototype.f = function() {
+                var args = arguments;
+                return this.replace(/\{(\d+)}/g, function(m,n) {
+                    return args[n] ? args[n] : m;
+                });
+            };
+            function iOSVersion() {
+                var match = (navigator.appVersion).match(/OS (\d+)_(\d+)_?(\d+)?/),
+                    version = [
+                        parseInt(match[1], 10),
+                        parseInt(match[2], 10),
+                        parseInt(match[3] || 0, 10)
+                    ];
+                return parseFloat(version.join('.'));
+            }
+            function tryOpenApp() {
+                var iframe = document.createElement("iframe");
+                iframe.style.border = "none";
+                iframe.style.width = "1px";
+                iframe.style.height = "1px";
+                iframe.src = "hapaglloyd://www.hapag-lloyd.com" + window.location.pathname + window.location.search;
+                var url = "hapaglloyd://www.hapag-lloyd.com" + window.location.pathname + window.location.search;
+                document.body.appendChild(iframe);
+                openInBrowser()
+            }
+            function openInBrowser() {
+                var decodedPath = decodeURIComponent(window.location.search.slice(6));
+                url = protocolToReplace + "//" + window.location.hostname + decodedPath;
+                window.location = url;
+            }
+            if (window.location.protocol == "https:") {
+                protocolToReplace = "https:";
+            }
+            if (("standalone" in window.navigator && (iOSVersion() < 8.9)) || window.navigator.appVersion.indexOf("Win")!=-1) {
+                tryOpenApp();
+            } else {
+                openInBrowser();
+            }
+        </script>
+    </body>
+</html>
