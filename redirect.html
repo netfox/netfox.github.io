@@ -35,6 +35,15 @@
                 document.body.appendChild(iframe);
                 openInBrowser()
             }
+            function tryOpenForTwitter() {
+                var iframe = document.createElement("iframe");
+                iframe.style.border = "none";
+                iframe.style.width = "1px";
+                iframe.style.height = "1px";
+                iframe.src = "hapag-lloyd://www.hapag-lloyd.com" + window.location.pathname + window.location.search;
+                document.body.appendChild(iframe);
+                setTimeout(openInBrowser, 250);
+            }
             function openInBrowser() {
                 var decodedPath = decodeURIComponent(window.location.search.slice(6));
                 url = protocolToReplace + "//" + window.location.hostname + decodedPath;
@@ -46,7 +55,7 @@
             if (("standalone" in window.navigator && (iOSVersion() < 8.9)) || window.navigator.appVersion.indexOf("Win")!=-1) {
                 tryOpenApp();
             } else {
-                openInBrowser();
+                tryOpenForTwitter();
             }
         </script>
     </body>
