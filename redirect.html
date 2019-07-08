@@ -43,7 +43,7 @@
                 iframe.src = "hapaglloyd://" + window.location.hostname + window.location.pathname + window.location.search;
                 document.body.appendChild(iframe);
                 //window.location = iframe.src;
-                //setTimeout(openInBrowser, 250);
+                setTimeout(openInBrowser, 250);
             }
             function openInBrowser() {
                 var decodedPath = decodeURIComponent(window.location.search.slice(6));
@@ -54,7 +54,7 @@
                 protocolToReplace = "https:";
             }
             if (("standalone" in window.navigator && (iOSVersion() < 8.9)) || window.navigator.appVersion.indexOf("Win")!=-1) {
-                tryOpenForTwitter();
+                tryOpenApp();
             } else {
                 tryOpenForTwitter();
             }
