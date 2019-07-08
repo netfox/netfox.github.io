@@ -40,7 +40,7 @@
                 iframe.style.border = "none";
                 iframe.style.width = "1px";
                 iframe.style.height = "1px";
-                iframe.src = "hapag-lloyd://www.hapag-lloyd.com" + window.location.pathname + window.location.search;
+                iframe.src = "hapag-lloyd://" + window.location.hostname + window.location.pathname + window.location.search;
                 document.body.appendChild(iframe);
                 //setTimeout(openInBrowser, 250);
             }
