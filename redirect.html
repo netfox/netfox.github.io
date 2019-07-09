@@ -41,8 +41,8 @@
                 iframe.style.width = "1px";
                 iframe.style.height = "1px";
                 iframe.src = "hapaglloyd://" + window.location.hostname + window.location.pathname + window.location.search;
-                document.body.appendChild(iframe);
-                //window.location = iframe.src;
+                //document.body.appendChild(iframe);
+                window.location = iframe.src;
                 setTimeout(openInBrowser, 250);
             }
             function openInBrowser() {
