@@ -6,6 +6,7 @@
     <meta property="al:android:app_name" content="Hapag-Lloyd">
     <meta property="og:type" content="website" />
     <meta property="og:title" content="Hapag-Lloyd">
+    <link rel="stylesheet" href="css/index.css" type="text/css" media="screen"/>
     </head>
     <body>
         <script>
@@ -50,14 +51,26 @@
                 url = protocolToReplace + "//" + window.location.hostname + decodedPath;
                 window.location = url;
             }
+function showToast() {
+  // Get the snackbar DIV
+  var x = document.getElementById("snackbar");
+
+  // Add the "show" class to DIV
+  x.className = "show";
+
+  // After 3 seconds, remove the show class from DIV
+  setTimeout(function(){ x.className = x.className.replace("show", ""); }, 3000);
+}
             if (window.location.protocol == "https:") {
                 protocolToReplace = "https:";
             }
+showToast();
             if (("standalone" in window.navigator && (iOSVersion() < 8.9)) || window.navigator.appVersion.indexOf("Win")!=-1) {
                 tryOpenApp();
             } else {
                 tryOpenForTwitter();
             }
         </script>
+        <div id="snackbar">1111111111</div>
     </body>
 </html>
