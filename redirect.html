@@ -25,6 +25,10 @@
                     ];
                 return parseFloat(version.join('.'));
             }
+function isFacebookApp() {
+    var ua = navigator.userAgent || navigator.vendor || window.opera;
+    return (ua.indexOf("FBAN") > -1) || (ua.indexOf("FBAV") > -1);
+}
             function tryOpenApp() {
                 var iframe = document.createElement("iframe");
                 iframe.style.border = "none";
@@ -56,8 +60,10 @@
 
             if (("standalone" in window.navigator && (iOSVersion() < 8.9)) || window.navigator.appVersion.indexOf("Win")!=-1) {
                 tryOpenApp();
-            } else {
+            } else if (isFacebookApp()) {
                 openInBrowser();
+            } else {
+                tryOpenForTwitter();
             }
 
         </script>
