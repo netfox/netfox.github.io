@@ -2,11 +2,11 @@
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
     <meta property="al:android:url" content="https://netfox.github.io/redirect.html">
-    <meta property="al:android:package" content="com.hlag.fit">
-    <meta property="al:android:app_name" content="Hapag-Lloyd">
+    <meta property="al:android:package" content="com.hlag.fit"/>
+    <meta property="al:android:app_name" content="Hapag-Lloyd"/>
     <meta property="og:type" content="website" />
-    <meta property="og:title" content="Hapag-Lloyd">
-    <link rel="stylesheet" href="css/index.css" type="text/css" media="screen"/>
+    <meta property="og:title" content="Hapag-Lloyd"/>
+    <meta property="al:web:should_fallback" content="false"/>
     </head>
     <body>
         <script>
@@ -51,16 +51,6 @@
                 url = protocolToReplace + "//" + window.location.hostname + decodedPath;
                 window.location = url;
             }
-function showToast() {
-  // Get the snackbar DIV
-  var x = document.getElementById("snackbar");
-
-  // Add the "show" class to DIV
-  x.className = "show";
-
-  // After 3 seconds, remove the show class from DIV
-  setTimeout(function(){ x.className = x.className.replace("show", ""); }, 3000);
-}
             if (window.location.protocol == "https:") {
                 protocolToReplace = "https:";
             }
@@ -72,6 +62,5 @@ function showToast() {
             }
 
         </script>
-        <div id="snackbar">1111111111</div>
     </body>
 </html>
