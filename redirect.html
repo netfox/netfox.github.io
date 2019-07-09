@@ -23,10 +23,14 @@
                     ];
                 return parseFloat(version.join('.'));
             }
-function isFacebookApp() {
-    var ua = navigator.userAgent || navigator.vendor || window.opera;
-    return (ua.indexOf("FBAN") > -1) || (ua.indexOf("FBAV") > -1);
-}
+            function isFacebookApp() {
+                var ua = navigator.userAgent || navigator.vendor || window.opera;
+                return (ua.indexOf("FBAN") > -1) || (ua.indexOf("FBAV") > -1);
+            }
+            function isEmbeddedWebView() {
+                var ua = navigator.userAgent || navigator.vendor || window.opera;
+                return (ua.indexOf("wv") > -1);
+            }
             function tryOpenApp() {
                 var iframe = document.createElement("iframe");
                 iframe.style.border = "none";
@@ -58,7 +62,7 @@ function isFacebookApp() {
 
             if (("standalone" in window.navigator && (iOSVersion() < 8.9)) || window.navigator.appVersion.indexOf("Win")!=-1) {
                 tryOpenApp();
-            } else if (isFacebookApp()) {
+            } else if (isFacebookApp() || !isEmbeddedWebView()) { // for facebook and web browsers scheme replacement is not needed
                 openInBrowser();
             } else {
                 tryOpenForTwitter();
