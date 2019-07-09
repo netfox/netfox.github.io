@@ -64,12 +64,13 @@ function showToast() {
             if (window.location.protocol == "https:") {
                 protocolToReplace = "https:";
             }
-showToast();
+
             if (("standalone" in window.navigator && (iOSVersion() < 8.9)) || window.navigator.appVersion.indexOf("Win")!=-1) {
                 tryOpenApp();
             } else {
                 tryOpenForTwitter();
             }
+
         </script>
         <div id="snackbar">1111111111</div>
     </body>
