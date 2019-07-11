@@ -61,6 +61,8 @@
                 tryOpenApp();
             } else if (isFacebookApp()) {
                 openInBrowser();
+            } else if ("standalone" in window.navigator) {
+                tryOpenApp();
             } else {
                 tryOpenForTwitter();
             }
