@@ -1,13 +1,15 @@
 <html>
-    <head>
-        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-    <meta property="al:ios:url" content="https://netfox.github.io/redirect.html" />
-    <meta property="al:android:package" content="com.hlag.fit"/>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
     <meta property="og:type" content="website" />
     <meta property="og:title" content="Hapag-Lloyd"/>
-    </head>
-    <body>
-        <script>
+    <meta property="al:ios:url" content="hapaglloyd://hlmobapps" />
+    <meta property="al:ios:app_store_id" content="935668102" />
+    <meta property="al:ios:app_name" content="Hapag-Lloyd" />
+    <meta property="al:android:package" content="com.hlag.fit"/>
+</head>
+<body>
+<script>
             var protocolToReplace = "http:";
             String.prototype.format = String.prototype.f = function() {
                 var args = arguments;
@@ -50,13 +52,12 @@
             }
             function openInBrowser() {
                 var decodedPath = decodeURIComponent(window.location.search.slice(6));
-                url = protocolToReplace + "//" + window.location.hostname + decodedPath;
+                var url = protocolToReplace + "//" + window.location.hostname + decodedPath;
                 window.location = url;
             }
             if (window.location.protocol == "https:") {
                 protocolToReplace = "https:";
             }
-
             if (("standalone" in window.navigator && (iOSVersion() < 8.9)) || window.navigator.appVersion.indexOf("Win")!=-1) {
                 tryOpenApp();
             } else if (isFacebookApp()) {
@@ -64,7 +65,6 @@
             } else {
                 tryOpenForTwitter();
             }
-
         </script>
-    </body>
+</body>
 </html>
