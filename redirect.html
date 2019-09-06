@@ -58,17 +58,9 @@
             if (("standalone" in window.navigator && (iOSVersion() < 8.9)) || window.navigator.appVersion.indexOf("Win")!=-1) {
                 tryOpenApp();
             } else if (isFacebookApp()) {
-                if ("standalone" in window.navigator && (iOSVersion() > 8.9)) { // leave out iOS to enable grace period
-                    tryOpenApp();
-                } else {
-                    openInBrowser();
-                }
+                openInBrowser();
             } else {
-                if ("standalone" in window.navigator && (iOSVersion() > 8.9)) { // leave out iOS
-                    tryOpenForTwitter();
-                } else {
-                    tryOpenForTwitter();
-                }
+                tryOpenForTwitter();
             }
         </script>
 </body>
