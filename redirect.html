@@ -67,7 +67,11 @@
                     openInBrowser();
                 }
             } else {
-                tryOpenForTwitter();
+                if ("standalone" in window.navigator && (iOSVersion() > 8.9)) { // leave out iOS
+                    tryOpenApp();
+                } else {
+                    tryOpenForTwitter();
+                }
             }
         </script>
 </body>
