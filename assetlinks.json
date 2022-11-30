@@ -1,0 +1,14 @@
+[
+  {
+    "relation": [
+      "delegate_permission/common.handle_all_urls"
+    ],
+    "target": {
+      "namespace": "android_app",
+      "package_name": "com.hlag.fit",
+      "sha256_cert_fingerprints": [
+        "72:19:10:53:7D:AF:34:FF:7E:EA:50:CD:9C:5B:9E:CF:36:EA:30:05:DB:45:9B:B3:14:9C:2F:A0:85:EF:89:50"
+      ]
+    }
+  }
+]
